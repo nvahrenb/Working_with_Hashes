@@ -9,5 +9,35 @@ end
 
 get '/states' do
   # code!
+  @states = Array.new
+  
+  @state = {}
+  @state[:id] = "MO"
+  @state[:name] = "Missouri"
+  @states << @state
+  
+  @state = {}
+  @state[:id] = "IN"
+  @state[:name] = "Indiana"
+  @states << @state
+  
+  @state = {}
+  @state[:id] = "MI"
+  @state[:name] = "Michigan"
+  @states << @state
+  
+  @state = {}
+  @state[:id] = "IL"
+  @state[:name] = "Illinois"
+  @states << @state
+  
+  @state = {}
+  @state[:id] = "KS"
+  @state[:name] = "Kansas"
+  @states << @state
+
+  @states.sort_by!{ | s | s[:name] }
+
+
   erb :states, layout: :main
 end

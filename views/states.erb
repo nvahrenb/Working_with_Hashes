@@ -4,3 +4,10 @@
 
 <!-- iterate through each state in the array and put them into list items individually -->
 
+<select>
+<% @states.each do | s | %>
+
+  <option value=<%= s[:id] %>><%= s[:name] %></option>
+
+<% end %>
+</select>
